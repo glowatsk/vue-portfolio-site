@@ -22,7 +22,7 @@
   </div>
   <Footer
     github_url="https://www.github.com/glowatsk"
-    linkedIn_url="https://www.linkedin.com/glowatsk"
+    linkedIn_url="https://ca.linkedin.com/in/glowatsk"
     cv_url="https://www.google.com"
     email_url="glowatsk(at)gmail(dot)com"/>
   </div>
