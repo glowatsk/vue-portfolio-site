@@ -1,4 +1,5 @@
 # portfolio-site
+Single page Vue portfolio site. Headshot, can add your github information to show your latest commits. Change your contact info. Add your source images. Then launch.
 
 ## Project setup
 ```
