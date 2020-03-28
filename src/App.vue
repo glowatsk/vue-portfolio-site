@@ -3,28 +3,31 @@
     <div class="container">
       <Header
         name="Brandon Glowatski"
-        p1="I am a programmer generalist, currently wearing many hats doing data analysis, engineering and automation at Finning International."
-        p2="My interests include weightlifting, keyboards, Dota2, and Raspberry Pi"
-        p3="I am always looking for new and interesting opportunities to grow or learn new skills. I am looking forward to hearing from you."
-        p4="This is what I am currently working on:"
+        p1="I am a programmer generalist, most recently building and deploying distributed web technologies for IoT at Levven Electronics."
+        p2="My interests include coffee, weightlifting, Dota2, Arch Linux and keyboards (the mechanical kind)."
+        p3="I am always open to opportunities to grow or learn new skills. I look forward to hearing from you."
+        p4="One of my goals for 2020 is to speak at a variety of meetups (originally in person, thanks Covid), if you are looking for speakers, please reach out."
+        p5="Here are some items I am currently working on:"
       />
     </div>
+    <div class="container is-fullhd">
+    </div>
     <div class="tile is-ancestor">
-    <Body
-      v-for="data in githubJSON"
-      v-bind:key="data.name"
-      v-bind:full_name="data.full_name"
-      v-bind:description="data.description"
-      v-bind:html_url="data.html_url"
-      v-bind:avatar_url="data.owner.avatar_url"
-      v-bind:language="data.language"
+      <Body
+        v-for="data in githubJSON"
+        v-bind:key="data.name"
+        v-bind:full_name="data.full_name"
+        v-bind:description="data.description"
+        v-bind:html_url="data.html_url"
+        v-bind:language="data.language"
+      />
+    </div>
+    <Footer
+      github_url="https://www.github.com/glowatsk"
+      linkedIn_url="https://ca.linkedin.com/in/glowatsk"
+      cv_url="https://www.dropbox.com/s/1g7dqfwezsudes1/Brandon%20Glowatski.pdf?dl=0"
+      email_url="glowatsk(at)gmail(dot)com"
     />
-  </div>
-  <Footer
-    github_url="https://www.github.com/glowatsk"
-    linkedIn_url="https://ca.linkedin.com/in/glowatsk"
-    cv_url="https://www.dropbox.com/s/1g7dqfwezsudes1/Brandon%20Glowatski.pdf?dl=0"
-    email_url="glowatsk(at)gmail(dot)com"/>
   </div>
 </template>
 
@@ -37,21 +40,21 @@ export default {
   name: "app",
   data() {
     return {
-      githubJSON: {}
+      githubJSON: {},
     };
   },
   created: function() {
     fetch("https://api.github.com/users/glowatsk/repos?sort=desc")
       .then(res => res.json())
       .then(json => {
-        this.githubJSON = json.slice(0,3);
+        this.githubJSON = json.slice(0, 3);
       });
   },
   components: {
     Header,
     Body,
     Footer
-  }
+  },
 };
 </script>
 
@@ -70,5 +73,10 @@ h {
 
 p {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+iframe {
+  width: 100%;
+  height: 700px;
 }
 </style>

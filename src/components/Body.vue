@@ -5,11 +5,6 @@
         <a id="title" class="subtitle" v-bind:href="html_url">{{description}}</a>
         <p class="content" id="language">Language: {{language}}</p>
       </div>
-      <div class="tile is-child" id="image">
-        <figure class="image is-4by3">
-          <img v-bind:src="avatar_url" />
-        </figure>
-      </div>
     </article>
   </div>
 </template>
@@ -21,7 +16,6 @@ export default {
     full_name: String,
     description: String,
     html_url: String,
-    avatar_url: String,
     language: String
   }
 };
