@@ -24,6 +24,7 @@
     </div>
     <Footer
       github_url="https://www.github.com/glowatsk"
+      gitlab_url="https://www.gitlab.com/glowatsk"
       linkedIn_url="https://ca.linkedin.com/in/glowatsk"
       cv_url="https://www.dropbox.com/s/1g7dqfwezsudes1/Brandon%20Glowatski.pdf?dl=0"
       email_url="glowatsk(at)gmail(dot)com"
